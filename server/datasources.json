@@ -1,0 +1,11 @@
+{
+  "postgres": {
+    "host": "/var/run/postgresql",
+    "port": "5432",
+    "database": "loopback2",
+    "username": "${POSTGRES_USERNAME}",
+    "password": "${POSTGRES_PASSWORD}",
+    "name": "postgres",
+    "connector": "postgresql"
+  }
+}

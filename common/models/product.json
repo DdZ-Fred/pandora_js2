@@ -1,0 +1,30 @@
+{
+  "name": "Product",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "postgresql": {
+        "columnName": "name",
+        "nullable": false
+      }
+    },
+    "weight": {
+      "type": "number",
+      "required": true,
+      "postgresql": {
+        "columnName": "weight",
+        "nullable": false
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
