@@ -1,5 +1,6 @@
 {
-  "name": "Product",
+  "name": "Category",
+  "plural": "Categories",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -14,25 +15,25 @@
         "nullable": false
       }
     },
-    "weight": {
-      "type": "number",
-      "required": true,
+    "description": {
+      "type": "string",
       "postgresql": {
-        "columnName": "weight",
+        "columnName": "description",
         "nullable": false
-      }
-    },
-    "categoryId": {
-      "type": "number",
-      "required": false,
-      "postgresql": {
-        "columnName": "categoryid",
-        "nullable": true
       }
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": "categoryId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

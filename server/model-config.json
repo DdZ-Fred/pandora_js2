@@ -38,5 +38,9 @@
   "Product": {
     "dataSource": "postgres",
     "public": true
+  },
+  "Category": {
+    "dataSource": "postgres",
+    "public": true
   }
 }

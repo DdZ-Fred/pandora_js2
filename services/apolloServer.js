@@ -76,9 +76,6 @@ module.exports = class ApolloServer {
           resolve: (_, args, ctx) => this.axios.get('/products')
             .then(response => response.data)
             .catch(err => console.log('Err: ', err) && []),
-          // resolve: (_, args, ctx) => new Promise((resolve, reject) => {
-          //   resolve(products);
-          // }),
         },
       },
     });
